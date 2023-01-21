@@ -1,0 +1,18 @@
+.header-nav-list-link {
+    color: whitesmoke;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.header-nav-list-link-active {
+    color: orangered;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.header-nav-list-link:hover {
+    color: orangered;
+    transition: 0.5s;
+    transform: scale(1.3);
+}

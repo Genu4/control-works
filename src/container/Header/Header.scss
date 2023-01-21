@@ -1,0 +1,32 @@
+header {
+    width: 100%;
+    padding-top: 40px;
+
+    .header {
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 5px;
+        text-align: center;
+        color: whitesmoke;
+
+        .menu-list {
+            width: 300px;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu-list-item {
+            font-size: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .menu-list-item:hover {
+            color: orangered;
+            transition: 0.5s;
+            transform: scale(1.3);
+        }
+    }
+}

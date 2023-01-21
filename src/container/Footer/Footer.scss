@@ -1,0 +1,28 @@
+footer {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    bottom: 20px;
+
+    .footer {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 5px;
+        font-size: 20px;
+        text-align: center;
+        color: whitesmoke;
+
+        .dev-text {
+            font-size: 14px;
+        }
+        .dev-group {
+            font-size: 14px;
+        }
+        .dev-date {
+            font-size: 12px;
+        }
+        p+p {
+            margin-top: 5px;
+        }
+    }
+}

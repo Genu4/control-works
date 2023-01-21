@@ -1,0 +1,22 @@
+main {
+    .main {
+        width: fit-content;
+        margin: 120px auto;
+        text-align: center;
+    }
+
+    .main-header {
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: orangered;
+    }
+    .main-content {
+        color: whitesmoke;
+        font-size: 20px;
+        line-height: 2.5;
+    }
+
+    .arrow {
+        font-size: large;
+    }
+}
