@@ -7,7 +7,7 @@ const ControlWork2 = (props: Props) => {
     return (
         <div className="control2">
             <div className="control2-content">
-                <h1 className="header">Task 2</h1>
+                <h1 className="control2-header">Task 2</h1>
                 <h2 className="title">Our shop page</h2>
                 <div className="btn-block">
                     <Button className="btn" variant="outlined">

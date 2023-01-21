@@ -24,9 +24,6 @@ const ProductsListItem = ({
     return (
         <Card className="product-list-item">
             <CardContent>
-                {/* <div className="product-img">
-                    <img src={image} alt="" />
-                </div> */}
                 <h4 className="product-title">{title}</h4>
                 <p className="product-desc">{desc}</p>
                 <div className="product-features">
