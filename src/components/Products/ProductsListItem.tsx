@@ -11,6 +11,8 @@ type Props = {
     price: number
     image: string
     addProductToCart: (id: number) => void
+    currency: string
+    coefficient: number
 }
 const ProductsListItem = ({
     id,
@@ -21,6 +23,8 @@ const ProductsListItem = ({
     price,
     image,
     addProductToCart,
+    currency,
+    coefficient
 }: Props) => {
     return (
         <Card className="product-list-item">
@@ -33,7 +37,7 @@ const ProductsListItem = ({
                 <div className="product-features">
                     <span>Capacity:</span> {capacity} gb
                 </div>
-                <div className="product-price">{price}$ </div>
+                <div className="product-price">{price*coefficient} <span>{currency}</span> </div>
             </CardContent>
 
             <CardActions className="btns-wrap">

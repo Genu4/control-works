@@ -16,7 +16,7 @@ const productsArray:ProductsProps[] = [
         desc:"This is iPhone X",
         type:"phone",
         capacity:"64",
-        price:500,
+        price:15000,
         image:"/images/iphone-black.jpg"
     },
 
@@ -26,7 +26,7 @@ const productsArray:ProductsProps[] = [
         desc:"This is iPhone 12",
         type:"phone",
         capacity:"128",
-        price:1000,
+        price:20000,
         image:"/images/iphone-blue.jpg"
     },
 
@@ -36,7 +36,7 @@ const productsArray:ProductsProps[] = [
         desc:"This is iPhone 13",
         type:"phone",
         capacity:"256",
-        price:1500,
+        price:25000,
         image:"/images/iphone-red.jpg"
     },
 

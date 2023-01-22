@@ -11,25 +11,35 @@ type Props = {
     productsObject?: {
         [id: number]: ProductsProps
     }
+    currency: string
+    coefficient: number
 }
 
 const CartTotal = ({
     productsInCart,
     productsObject = getProductsObject(productsArray),
+    currency,
+    coefficient,
 }: Props) => {
     return (
         <div className="cart-total">
             {Object.keys(productsInCart).map((productId) => (
                 <div key={productId}>
-                    {productsObject[parseInt(productId)].title}: {' '}
-                    {productsObject[parseInt(productId)].price}
+                    {productsObject[parseInt(productId)].title}:{' '}
+                    {productsObject[parseInt(productId)].price * coefficient}
                 </div>
             ))}
 
-            <div className='total-price'>Total:
-                {Object.keys(productsInCart).reduce((total, productId) => (
-                    total + productsObject[parseInt(productId)].price
-                ),0)}
+            <div className="total-price">
+                <div>Total:</div>
+                <div>
+                    {Object.keys(productsInCart).reduce(
+                        (total, productId) =>
+                            total + productsObject[parseInt(productId)].price * coefficient,
+                        0
+                    )}
+                </div>
+                <div>{currency}</div>
             </div>
         </div>
     )
