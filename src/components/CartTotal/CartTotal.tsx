@@ -1,23 +1,36 @@
 import './CartTotal.scss'
-import productsArray from '../Products/productsArray'
+import productsArray, {
+    getProductsObject,
+    ProductsProps,
+} from '../Products/productsArray'
 
 type Props = {
     productsInCart: {
         [id: number]: number
     }
+    productsObject?: {
+        [id: number]: ProductsProps
+    }
 }
-const CartTotal = ({ productsInCart }: Props) => {
-    console.log(productsInCart)
-    console.log(Object.keys(productsInCart))
+
+const CartTotal = ({
+    productsInCart,
+    productsObject = getProductsObject(productsArray),
+}: Props) => {
     return (
         <div className="cart-total">
-            CartTotal:
             {Object.keys(productsInCart).map((productId) => (
                 <div key={productId}>
-                    {' '}
-                    {productId} : {productsInCart[parseInt(productId)]}
+                    {productsObject[parseInt(productId)].title}: {' '}
+                    {productsObject[parseInt(productId)].price}
                 </div>
             ))}
+
+            <div className='total-price'>Total:
+                {Object.keys(productsInCart).reduce((total, productId) => (
+                    total + productsObject[parseInt(productId)].price
+                ),0)}
+            </div>
         </div>
     )
 }

@@ -1,15 +1,27 @@
 import Button from '@mui/material/Button'
 import CartTotal from '../../components/CartTotal/CartTotal'
 import ProductsList from '../../components/Products/ProductsList'
+import { useState } from 'react'
 import './ControlWork2.scss'
 
-type Props = {
-    productsInCart: {
-        [id: number]: number
-    }
+type Props = {}
+
+type ProductsInCart = {
+    [id: number]: number
 }
-const ControlWork2 = ({productsInCart}: Props) => {
-    
+
+const ControlWork2 = (props: Props) => {
+    const [productsInCart, setProductsInCart] = useState<ProductsInCart>({
+        
+    })
+
+    const addProductToCart = (id: number) => {
+        setProductsInCart((prevState: ProductsInCart) => ({
+            ...prevState,
+            [id]: prevState[id],
+        }))
+    }
+
     return (
         <div className="control2">
             <div className="control2-content">
@@ -30,10 +42,9 @@ const ControlWork2 = ({productsInCart}: Props) => {
                     </Button>
                 </div>
                 <div>
-                    <ProductsList />
+                    <ProductsList addProductToCart={addProductToCart}/>
                 </div>
-                <CartTotal productsInCart={productsInCart}/>
-
+                <CartTotal productsInCart={productsInCart} />
             </div>
         </div>
     )
