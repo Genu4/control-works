@@ -41,8 +41,7 @@ const ControlWork2 = (props: Props) => {
     return (
         <div className="control2">
             <div className="control2-content">
-                <h1 className="control2-header">Task 2</h1>
-                <h2 className="title">Our shop page</h2>
+                <h1 className="control2-header">Our shop page</h1>
                 <div className="btn-block">
                     <Button
                         className="btn"

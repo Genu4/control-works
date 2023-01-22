@@ -26,7 +26,7 @@ const CartTotal = ({
             {Object.keys(productsInCart).map((productId) => (
                 <div key={productId}>
                     {productsObject[parseInt(productId)].title}:{' '}
-                    {productsObject[parseInt(productId)].price * coefficient}
+                    {productsObject[parseInt(productId)].price * coefficient} {currency}
                 </div>
             ))}
 

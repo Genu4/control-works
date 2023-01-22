@@ -6,7 +6,7 @@ const ControlWork1 = (props: Props) => {
     return (
         <div className="control1">
             <div className="control1-content">
-                <h1 className='control1-header'>Task 1</h1>
+                <h1 className='control1-header'>Clicker</h1>
                 <div className="btn-block">
                     <Btn/>
                     <Btn/>
