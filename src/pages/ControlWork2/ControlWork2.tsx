@@ -1,9 +1,15 @@
 import Button from '@mui/material/Button'
+import CartTotal from '../../components/CartTotal/CartTotal'
 import ProductsList from '../../components/Products/ProductsList'
 import './ControlWork2.scss'
 
-type Props = {}
-const ControlWork2 = (props: Props) => {
+type Props = {
+    productsInCart: {
+        [id: number]: number
+    }
+}
+const ControlWork2 = ({productsInCart}: Props) => {
+    
     return (
         <div className="control2">
             <div className="control2-content">
@@ -26,6 +32,8 @@ const ControlWork2 = (props: Props) => {
                 <div>
                     <ProductsList />
                 </div>
+                <CartTotal productsInCart={productsInCart}/>
+
             </div>
         </div>
     )
