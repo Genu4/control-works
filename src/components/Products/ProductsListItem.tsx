@@ -9,7 +9,6 @@ type Props = {
     type: string
     capacity: string
     price: number
-    image: string
     addProductToCart: (id: number) => void
     currency: string
     coefficient: number
@@ -21,7 +20,6 @@ const ProductsListItem = ({
     type,
     capacity,
     price,
-    image,
     addProductToCart,
     currency,
     coefficient

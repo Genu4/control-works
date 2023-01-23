@@ -5,7 +5,7 @@ export type ProductsProps = {
     type: string
     capacity: string
     price: number
-    image: string
+    
 }
 
 
@@ -17,7 +17,7 @@ const productsArray:ProductsProps[] = [
         type:"phone",
         capacity:"64",
         price:15000,
-        image:"/images/iphone-black.jpg"
+        
     },
 
     {
@@ -27,7 +27,7 @@ const productsArray:ProductsProps[] = [
         type:"phone",
         capacity:"128",
         price:20000,
-        image:"/images/iphone-blue.jpg"
+        
     },
 
     {
@@ -37,7 +37,7 @@ const productsArray:ProductsProps[] = [
         type:"phone",
         capacity:"256",
         price:25000,
-        image:"/images/iphone-red.jpg"
+        
     },
 
 ]
